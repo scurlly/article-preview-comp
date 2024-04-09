@@ -4,33 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/drawers.jpg">
   
-  <title>Frontend Mentor | Article preview component</title>
+  <title>Article preview component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-</head>
-<body>
-
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
+  <script src="https://cdn.tailwindcss.com"></script>
   
-  <div class="attribution">
+</head>
+<body class="bg-LightGrayishBlue">
+  <div class="flex flex-col w-5/6 md:w-2/3 m-auto mt-16 bg-white rounded-lg shadow-lg lg:flex-row lg:w-[52%]">
+    <div class="lg:w-[40%]">
+      <img class="w-full lg:h-full h-52 object-cover object-center rounded-t-lg lg:rounded-r-none lg:rounded-l-lg" src="images/drawers.jpg" alt="drawers">
+    </div>
+      
+    
+    <div class="pt-10 px-7 pb-6 lg:w-[60%] lg:px-12 lg:pr-16">
+      <h4 class="text-VeryDarkGrayishBlue text-base lg:text-lg font-bold font-[Manrope] mb-3">Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</h4>
+      <p class="text-DesaturatedDarkBlue text-sm font-[Manrope] mb-8">Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.</p>
+      <div class="flex items-center relative">
+        <img class="w-12 h-12 rounded-full" src="images/avatar-michelle.jpg" alt="avatar-michelle">
+        <div class="ml-4">
+          <h6 class="font-bold font-[Manrope] text-VeryDarkGrayishBlue text-[0.8rem]">Michelle Appleton</h6>
+          <p class="text-GrayishBlue text-[0.8rem]">28 Jun 2020</p>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-LightGrayishBlue absolute right-0 hover:bg-[#6E8098]" id="share-button">
+          <svg class="hover:fill-LightGrayishBlue  pl-2 pt-2" fill="#6E8098"  xmlns="http://www.w3.org/2000/svg" width="35" height="33">
+            <path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            <div class="social-links scale-0 bg-white p-4 rounded-md shadow-md">
+              <!-- Social media share links go here -->
+              <a href="#" class="block mb-2">Facebook</a>
+              <a href="#" class="block mb-2">Twitter</a>
+              <a href="#" class="block mb-2">LinkedIn</a>
+              <!-- Add more social media share links as needed -->
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="attribution fixed bottom-0">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          LightGrayishBlue: 'hsl(210, 46%, 95%)',
+          VeryDarkGrayishBlue: 'hsl(217, 19%, 35%)',
+          DesaturatedDarkBlue: 'hsl(214, 17%, 51%)',
+          GrayishBlue: 'hsl(212, 23%, 69%)'
+        }
+      }
+    }
+  }
+
+  document.getElementById('share-button').addEventListener('click', function() {
+document.getElementById('social-links').classList.toggle('scale-0');
+});
+
+</script>
 </html>
