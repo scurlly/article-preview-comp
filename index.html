@@ -18,6 +18,20 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            LightGrayishBlue: 'hsl(210, 46%, 95%)',
+            VeryDarkGrayishBlue: 'hsl(217, 19%, 35%)',
+            DesaturatedDarkBlue: 'hsl(214, 17%, 51%)',
+            GrayishBlue: 'hsl(212, 23%, 69%)'
+          }
+        }
+      }
+    }
+  </script>
   
 </head>
 <body class="bg-LightGrayishBlue">
@@ -39,20 +53,30 @@
           <h6 class="font-bold font-[Manrope] text-VeryDarkGrayishBlue text-[0.8rem]">Michelle Appleton</h6>
           <p class="text-GrayishBlue text-[0.8rem]">28 Jun 2020</p>
         </div>
-        <div class="w-8 h-8 rounded-full bg-LightGrayishBlue absolute right-0 hover:bg-[#6E8098]" id="share-button">
+        <div id="share-button" class="w-8 h-8 rounded-full bg-LightGrayishBlue absolute right-0 hover:bg-[#6E8098]" >
           <svg class="hover:fill-LightGrayishBlue  pl-2 pt-2" fill="#6E8098"  xmlns="http://www.w3.org/2000/svg" width="35" height="33">
             <path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
-            <div class="social-links scale-0 bg-white p-4 rounded-md shadow-md">
-              <!-- Social media share links go here -->
-              <a href="#" class="block mb-2">Facebook</a>
-              <a href="#" class="block mb-2">Twitter</a>
-              <a href="#" class="block mb-2">LinkedIn</a>
-              <!-- Add more social media share links as needed -->
-            </div>
         </div>
-        
       </div>
     </div>
+
+      
+      <div id="social-links" class="flex items-center relative bg-VeryDarkGrayishBlue">
+        <h6 class="text-GrayishBlue text-sm font-[Manrope] mb-8">SHARE</h6>
+        <div class="ml-4 flex justify-evenly">
+          <a href="#" class=" mb-2"><img src="images/icon-facebook.svg" alt="icon-facebook"></a>
+              <a href="#" class=" mb-2"><img src="images/icon-twitter.svg" alt="icon-twitter"></a>
+              <a href="#" class=" mb-2"><img src="images/icon-pinterest.svg" alt="icon-pinterest"></a>
+          
+        </div>
+          <svg class="hover:fill-LightGrayishBlue  pl-2 pt-2" fill="#6E8098"  xmlns="http://www.w3.org/2000/svg" width="35" height="33">
+            <path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            
+        
+      </div>
+
+
+
   </div>
 
   
@@ -62,23 +86,13 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          LightGrayishBlue: 'hsl(210, 46%, 95%)',
-          VeryDarkGrayishBlue: 'hsl(217, 19%, 35%)',
-          DesaturatedDarkBlue: 'hsl(214, 17%, 51%)',
-          GrayishBlue: 'hsl(212, 23%, 69%)'
-        }
-      }
-    }
-  }
 
-  document.getElementById('share-button').addEventListener('click', function() {
-document.getElementById('social-links').classList.toggle('scale-0');
-});
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('share-button').addEventListener('click', function() {
+      document.getElementById('social-links').classList.toggle('scale-0');
+    });
+  });
+</script> -->
 
-</script>
 </html>
