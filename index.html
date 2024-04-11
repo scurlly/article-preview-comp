@@ -41,39 +41,57 @@
     </div>
       
     
-    <div class="pt-10 px-7 pb-6 lg:w-[60%] lg:px-12 lg:pr-16">
+    <div class="pt-10 px-7 lg:w-[60%] lg:px-12 lg:pb-2 lg:pr-16">
       <h4 class="text-VeryDarkGrayishBlue text-base lg:text-lg font-bold font-[Manrope] mb-3">Shift the overall look and feel by adding these wonderful 
         touches to furniture in your home</h4>
-      <p class="text-DesaturatedDarkBlue text-sm font-[Manrope] mb-8">Ever been in a room and felt like something was missing? Perhaps 
+      <p class="text-DesaturatedDarkBlue text-sm font-[Manrope]">Ever been in a room and felt like something was missing? Perhaps 
         it felt slightly bare and uninviting. I’ve got some simple tips 
         to help you make any room feel complete.</p>
-      <div class="flex items-center relative">
+      
+        <!-- <div class="relative w-64 p-4 bg-gray-100 rounded-lg">
+  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -mt-2 w-1 h-1 border-solid border-transparent border-b-4 border-gray-100 bg-black"></div>
+  <p>This is a dialogue box.</p>
+</div> -->
+
+        <div class="items-center relative py-6 hidden lg:flex">
+          <img class="w-12 h-12 rounded-full" src="images/avatar-michelle.jpg" alt="avatar-michelle">
+          <div class="ml-4">
+            <h6 class="font-bold font-[Manrope] text-VeryDarkGrayishBlue text-[0.8rem]">Michelle Appleton</h6>
+            <p class="text-GrayishBlue text-[0.8rem]">28 Jun 2020</p>
+          </div>
+          <div id="share-button-lg" class="w-8 h-8 rounded-full bg-LightGrayishBlue absolute right-0 hover:bg-[#6E8098]" >
+            <svg class="hover:fill-LightGrayishBlue  pl-2 pt-2" fill="#6E8098"  xmlns="http://www.w3.org/2000/svg" width="35" height="33">
+              <path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+          </div>
+        </div>
+    </div>
+
+      <div id="name-tag" class="flex items-center relative px-7 py-5 lg:hidden">
         <img class="w-12 h-12 rounded-full" src="images/avatar-michelle.jpg" alt="avatar-michelle">
         <div class="ml-4">
           <h6 class="font-bold font-[Manrope] text-VeryDarkGrayishBlue text-[0.8rem]">Michelle Appleton</h6>
           <p class="text-GrayishBlue text-[0.8rem]">28 Jun 2020</p>
         </div>
-        <div id="share-button" class="w-8 h-8 rounded-full bg-LightGrayishBlue absolute right-0 hover:bg-[#6E8098]" >
+        <div id="share-button" class="w-8 h-8 rounded-full bg-LightGrayishBlue absolute right-7 hover:bg-[#6E8098]" >
           <svg class="hover:fill-LightGrayishBlue  pl-2 pt-2" fill="#6E8098"  xmlns="http://www.w3.org/2000/svg" width="35" height="33">
             <path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
         </div>
       </div>
-    </div>
 
-      
-      <div id="social-links" class="flex items-center relative bg-VeryDarkGrayishBlue">
-        <h6 class="text-GrayishBlue text-sm font-[Manrope] mb-8">SHARE</h6>
-        <div class="ml-4 flex justify-evenly">
-          <a href="#" class=" mb-2"><img src="images/icon-facebook.svg" alt="icon-facebook"></a>
-              <a href="#" class=" mb-2"><img src="images/icon-twitter.svg" alt="icon-twitter"></a>
-              <a href="#" class=" mb-2"><img src="images/icon-pinterest.svg" alt="icon-pinterest"></a>
-          
-        </div>
-          <svg class="hover:fill-LightGrayishBlue  pl-2 pt-2" fill="#6E8098"  xmlns="http://www.w3.org/2000/svg" width="35" height="33">
-            <path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+        <div id="links-container"  class="flex items-center bg-VeryDarkGrayishBlue relative px-7 py-5 mt-5 hidden rounded-b-lg">
+          <h6 class="text-GrayishBlue tracking-[0.3rem] text-[0.8rem] font-[Manrope]">SHARE</h6>
+          <div class="ml-5 flex items-center">
+            <a href="#" class=""><img src="images/icon-facebook.svg" alt="icon-facebook"></a>
+                <a href="#" class="mx-4"><img src="images/icon-twitter.svg" alt="icon-twitter"></a>
+                <a href="#" class=""><img src="images/icon-pinterest.svg" alt="icon-pinterest"></a>
             
-        
+          </div>
+          <div id="share-button2" class="w-8 h-8 rounded-full bg-[#6E8098] absolute right-7 hover:bg-LightGrayishBlue" >
+            <svg class="hover:fill-[#6E8098] pl-2 pt-2" fill="white"  xmlns="http://www.w3.org/2000/svg" width="35" height="33">
+              <path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+          </div>
       </div>
+      
 
 
 
@@ -87,12 +105,16 @@
   </div>
 </body>
 
-<!-- <script>
+<script>
   document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('share-button').addEventListener('click', function() {
-      document.getElementById('social-links').classList.toggle('scale-0');
-    });
+    document.getElementById('share-button').addEventListener('click', toggleShare);
+    document.getElementById('share-button2').addEventListener('click', toggleShare);
+
+    function toggleShare() {
+      document.getElementById('links-container').classList.toggle('hidden');
+       document.getElementById('name-tag').classList.toggle('hidden');
+    }
   });
-</script> -->
+</script>
 
 </html>
